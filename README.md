@@ -13,9 +13,8 @@ The game is played as follows:
 - Player accumulates point and the game gets harder and harder.
 - There are six levels.
 
-![Game Play](http://recordit.co/x6C4px3o44)
+![Game Play](http://static1.squarespace.com/static/579ce2ca6b8f5ba108871e81/t/579d071bd2b857da936a0dde/1469908913559/typer-burn-screenshot.jpg?format=1000w)
 
-![Key Outline](http://recordit.co/hsVk47AOD8)
 
 ## Typrr-Burn Starter Kit
 
