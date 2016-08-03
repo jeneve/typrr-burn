@@ -4,10 +4,10 @@ const Level = require('../lib/level')
 
 describe ("Keystroke", function() {
 	context('with a correct keystroke', function(){
-		var level = new Level(1, 1, {})
+		var level = new Level({number: 1, accumulatedScore: 1, bird: {}})
 		var text = level.challenge[0]
 		var char = level.challenge[0][0]
-		var correctKeystroke = new KeyStroke(char, text, level);
+		var correctKeystroke = new KeyStroke({char: char, currentText: text, level: level});
 
 		it('should assign a char', function(){
 			assert.equal(correctKeystroke.char, char)
@@ -33,10 +33,10 @@ describe ("Keystroke", function() {
 	})
 
 	context('with an incorrect keystroke', function(){
-		var level = new Level(1, 1, {});
+		var level = new Level({number: 1, accumulatedScore: 1, bird: {}});
 		var text = level.challenge[0]
 		var bird = {};
-		var incorrectKeystroke = new KeyStroke("z", text, level);
+		var incorrectKeystroke = new KeyStroke({char: "z", currentText: text, level: level});
 
 		it('should assign a char', function(){
 			assert.equal(incorrectKeystroke.char, "z")
@@ -62,10 +62,10 @@ describe ("Keystroke", function() {
 	})
 
 	context('with an backspace keystroke', function(){
-		var level = new Level(1, 1, {});
+		var level = new Level({number: 1, accumulatedScore: 1, bird: {}});
 		var text = level.challenge[0]
 		var bird = {};
-		var backspace = new KeyStroke("Backspace", text, level);
+		var backspace = new KeyStroke({char: "Backspace", currentText: text, level: level});
 
 		it('should assign a char', function(){
 			assert.equal(backspace.char, "Backspace")
@@ -91,12 +91,12 @@ describe ("Keystroke", function() {
 	})
 
 	context('with a correct keystroke at the end of a line', function(){
-		var level = new Level(1, 1, {});
+		var level = new Level({number: 1, accumulatedScore: 1, bird: {}});
 		var text = level.challenge[0]
 		var lastCharIndex = level.challenge.length
 		var lastChar = level.challenge[0][lastCharIndex]
 		var bird = {};
-		var lastCharKeystroke = new KeyStroke(lastChar, text, level);
+		var lastCharKeystroke = new KeyStroke({char: lastChar, currentText: text, level: level});
 
 		it('should assign a char', function(){
 			assert.equal(lastCharKeystroke.char, lastChar)

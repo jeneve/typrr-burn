@@ -4,8 +4,8 @@ const texts = require('../lib/texts')
 
 describe ("Level", function(){
   context('with default attributes', function(){
-    var level = new Level(1, 1);
-    var level6 = new Level(6, 60);
+    var level = new Level({number: 1, accumulatedScore: 1});
+    var level6 = new Level({number: 6, accumulatedScore: 60});
 
     it('should assign a number', function(){
       assert.equal(level.number, 1);
